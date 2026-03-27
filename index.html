@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="神秘運勢占卜 — 點擊水晶球，揭開今日命運的面紗">
+  <title>✨ 神秘運勢占卜 ✨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="starfield"></canvas>
+
+  <div class="container">
+    <!-- 首頁區塊 -->
+    <header id="hero">
+      <div class="logo">🔮</div>
+      <h1>神秘運勢占卜</h1>
+      <p class="subtitle">點擊水晶球，揭開今日命運的面紗</p>
+      <p class="intro">集中精神，在心中默念你的問題，<br>然後按下水晶球開始占卜……</p>
+    </header>
+
+    <!-- 占卜互動區 -->
+    <section id="oracle-section">
+      <button id="divine-btn" class="crystal-btn" aria-label="開始占卜">
+        <span class="crystal-emoji">🔮</span>
+        <span class="btn-text">開始占卜</span>
+      </button>
+    </section>
+
+    <!-- 占卜動畫區 -->
+    <section id="loading-section" class="hidden">
+      <div class="loading-orb">
+        <span>🌀</span>
+      </div>
+      <p class="loading-text">命運之輪正在轉動…</p>
+    </section>
+
+    <!-- 結果區塊 -->
+    <section id="result-section" class="hidden">
+      <div class="result-card">
+        
+        <div class="result-badge" id="result-badge"></div>
+        <h2 class="result-title" id="result-title"></h2>
+        <p class="result-summary" id="result-summary"></p>
+
+        <div class="result-details">
+          <div class="detail-item">
+            <span class="detail-icon">💼</span>
+            <span class="detail-label">工作</span>
+            <div class="detail-stars" id="detail-work"></div>
+            <p class="detail-text" id="text-work"></p>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">📚</span>
+            <span class="detail-label">學業</span>
+            <div class="detail-stars" id="detail-study"></div>
+            <p class="detail-text" id="text-study"></p>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">❤️</span>
+            <span class="detail-label">愛情</span>
+            <div class="detail-stars" id="detail-love"></div>
+            <p class="detail-text" id="text-love"></p>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">💰</span>
+            <span class="detail-label">金錢</span>
+            <div class="detail-stars" id="detail-money"></div>
+            <p class="detail-text" id="text-money"></p>
+          </div>
+        </div>
+
+        <p class="result-quote" id="result-quote"></p>
+
+        <button id="retry-btn" class="retry-btn">🔄 再占卜一次</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>✨ 僅供娛樂，命運掌握在自己手中 ✨</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
